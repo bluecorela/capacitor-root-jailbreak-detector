@@ -22,6 +22,7 @@ export interface RootJailBreakDetectorPlugin {
   isCheckInstalledPackagesRooted(): Promise<{ isRooted: boolean }>;
   isCheckforOverTheAirCertificatesRooted(): Promise<{ isRooted: boolean }>;
   isRunningOnEmulatorRooted(): Promise<{ isRooted: boolean }>;
+  isRunningOnEmulator(): Promise<{ isRooted: boolean }>;
   simpleCheckEmulatorRooted(): Promise<{ isRooted: boolean }>;
   simpleCheckSDKBF86Rooted(): Promise<{ isRooted: boolean }>;
   simpleCheckQRREFPHRooted(): Promise<{ isRooted: boolean }>;

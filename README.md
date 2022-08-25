@@ -36,6 +36,7 @@ npx cap sync
 * [`isCheckInstalledPackagesRooted()`](#ischeckinstalledpackagesrooted)
 * [`isCheckforOverTheAirCertificatesRooted()`](#ischeckforovertheaircertificatesrooted)
 * [`isRunningOnEmulatorRooted()`](#isrunningonemulatorrooted)
+* [`isRunningOnEmulator()`](#isrunningonemulator)
 * [`simpleCheckEmulatorRooted()`](#simplecheckemulatorrooted)
 * [`simpleCheckSDKBF86Rooted()`](#simplechecksdkbf86rooted)
 * [`simpleCheckQRREFPHRooted()`](#simplecheckqrrefphrooted)
@@ -297,6 +298,17 @@ isCheckforOverTheAirCertificatesRooted() => Promise<{ isRooted: boolean; }>
 
 ```typescript
 isRunningOnEmulatorRooted() => Promise<{ isRooted: boolean; }>
+```
+
+**Returns:** <code>Promise&lt;{ isRooted: boolean; }&gt;</code>
+
+--------------------
+
+
+### isRunningOnEmulator()
+
+```typescript
+isRunningOnEmulator() => Promise<{ isRooted: boolean; }>
 ```
 
 **Returns:** <code>Promise&lt;{ isRooted: boolean; }&gt;</code>

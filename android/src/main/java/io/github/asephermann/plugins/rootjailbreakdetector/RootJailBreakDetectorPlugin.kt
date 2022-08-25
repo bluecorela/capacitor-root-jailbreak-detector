@@ -430,6 +430,22 @@ class RootJailBreakDetectorPlugin : Plugin() {
     }
 
     @PluginMethod
+    fun isRunningOnEmulator(call: PluginCall) {
+        val ret = JSObject()
+        try {
+            val isRooted: Boolean = implementation.isRunningOnEmulator
+
+            Log.e(Constants.LOG_TAG, "isRunningOnEmulator: $isRooted");
+
+            ret.put("isRooted", isRooted)
+            call.resolve(ret)
+        } catch (error: Exception) {
+            Utils.getPluginResultError("isRunningOnEmulator: ", error)
+            call.reject(error.toString())
+        }
+    }
+
+    @PluginMethod
     fun simpleCheckEmulatorRooted(call: PluginCall) {
         val ret = JSObject()
         try {

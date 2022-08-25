@@ -3,6 +3,9 @@ import { WebPlugin } from '@capacitor/core';
 import type { DeviceInfo, RootJailBreakDetectorPlugin } from './definitions';
 
 export class RootJailBreakDetectorWeb extends WebPlugin implements RootJailBreakDetectorPlugin {
+  isRunningOnEmulator(): Promise<{ isRooted: boolean; }> {
+    throw new Error('Method not implemented.');
+  }
   async isRooted(): Promise<{ isRooted: boolean }> {
     throw new Error('Method not implemented.');
   }
