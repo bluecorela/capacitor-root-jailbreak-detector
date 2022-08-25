@@ -338,16 +338,37 @@ class RootJailBreakDetector {
                 Build.FINGERPRINT.startsWith("generic") || Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith(
                     "generic"
                 )
+
+            val checkSDKEmulator = ((Build.FINGERPRINT.startsWith("google/sdk_gphone_")
+                        && Build.FINGERPRINT.endsWith(":user/release-keys")
+                        && Build.MANUFACTURER == "Google" && Build.PRODUCT.startsWith("sdk_gphone_") && Build.BRAND == "google"
+                        && Build.MODEL.startsWith("sdk_gphone_"))
+                        //
+                        || Build.FINGERPRINT.startsWith("generic")
+                        // || Build.FINGERPRINT.startsWith("unknown")
+                        || Build.MODEL.contains("google_sdk")
+                        || Build.MODEL.contains("Emulator")
+                        || Build.MODEL.contains("Android SDK built for x86")
+                        //bluestacks
+                        || "QC_Reference_Phone" == Build.BOARD && !"Xiaomi".equals(Build.MANUFACTURER,ignoreCase = true) //bluestacks
+                        || Build.MANUFACTURER.contains("Genymotion")
+                        || Build.HOST.startsWith("Build") //MSI App Player
+                        || Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic")
+                        || Build.PRODUCT == "google_sdk"
+                        // another Android SDK emulator check
+                        || SystemProperties.getProp("ro.kernel.qemu") == "1")
+
             val checkGoogleSDK = Build.MODEL.contains("google_sdk") || "google_sdk" == Build.PRODUCT
-            val result = simpleCheck || checkGenymotion || checkGeneric || checkGoogleSDK
+            val result = simpleCheck || checkGenymotion || checkGeneric || checkGoogleSDK || checkSDKEmulator
             Log.d(
                 Constants.LOG_TAG, String.format(
-                    "[isRunningOnEmulator] result [%s] => [simpleCheck:%s][checkGenymotion:%s][checkGeneric:%s][checkGoogleSDK:%s]",
+                    "[isRunningOnEmulator] result [%s] => [simpleCheck:%s][checkGenymotion:%s][checkGeneric:%s][checkGoogleSDK:%s][checkSDKEmulator:%s]",
                     result,
                     simpleCheck,
                     checkGenymotion,
                     checkGeneric,
-                    checkGoogleSDK
+                    checkGoogleSDK,
+                    checkSDKEmulator
                 )
             )
             return result
