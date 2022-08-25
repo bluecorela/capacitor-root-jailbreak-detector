@@ -339,11 +339,11 @@ class RootJailBreakDetector {
                     "generic"
                 )
 
-            val checkSDKEmulator = ((Build.FINGERPRINT.startsWith("google/sdk_gphone_")
+            val checkSDKEmulator = ((Build.FINGERPRINT.startsWith("google/sdk_gphone")
                         && (Build.FINGERPRINT.endsWith(":user/release-keys") 
                         || Build.FINGERPRINT.endsWith(":userdebug/dev-keys"))
-                        && Build.MANUFACTURER == "Google" && Build.PRODUCT.startsWith("sdk_gphone_") && Build.BRAND == "google"
-                        && Build.MODEL.startsWith("sdk_gphone_"))
+                        && Build.MANUFACTURER == "Google" && Build.PRODUCT.startsWith("sdk_gphone") && Build.BRAND == "google"
+                        && Build.MODEL.startsWith("sdk_gphone"))
                         //
                         || Build.FINGERPRINT.startsWith("generic")
                         // || Build.FINGERPRINT.startsWith("unknown")
