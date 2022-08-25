@@ -340,7 +340,8 @@ class RootJailBreakDetector {
                 )
 
             val checkSDKEmulator = ((Build.FINGERPRINT.startsWith("google/sdk_gphone_")
-                        && Build.FINGERPRINT.endsWith(":user/release-keys")
+                        && (Build.FINGERPRINT.endsWith(":user/release-keys") 
+                        || Build.FINGERPRINT.endsWith(":userdebug/dev-keys"))
                         && Build.MANUFACTURER == "Google" && Build.PRODUCT.startsWith("sdk_gphone_") && Build.BRAND == "google"
                         && Build.MODEL.startsWith("sdk_gphone_"))
                         //
@@ -354,9 +355,9 @@ class RootJailBreakDetector {
                         || Build.MANUFACTURER.contains("Genymotion")
                         || Build.HOST.startsWith("Build") //MSI App Player
                         || Build.BRAND.startsWith("generic") && Build.DEVICE.startsWith("generic")
-                        || Build.PRODUCT == "google_sdk"
+                        || Build.PRODUCT == "google_sdk")
                         // another Android SDK emulator check
-                        || SystemProperties.getProp("ro.kernel.qemu") == "1")
+//                        || SystemProperties.getProp("ro.kernel.qemu") == "1"
 
             val checkGoogleSDK = Build.MODEL.contains("google_sdk") || "google_sdk" == Build.PRODUCT
             val result = simpleCheck || checkGenymotion || checkGeneric || checkGoogleSDK || checkSDKEmulator
