@@ -1,0 +1,452 @@
+{
+  "api": {
+    "name": "RootJailBreakDetectorPlugin",
+    "slug": "rootjailbreakdetectorplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "isRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isrooted"
+      },
+      {
+        "name": "isRootedWithBusyBox",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isrootedwithbusybox"
+      },
+      {
+        "name": "isRootedWithEmulator",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isrootedwithemulator"
+      },
+      {
+        "name": "isRootedWithBusyBoxWithEmulator",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isrootedwithbusyboxwithemulator"
+      },
+      {
+        "name": "isDetectRootManagementAppsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isdetectrootmanagementappsrooted"
+      },
+      {
+        "name": "isDetectPotentiallyDangerousAppsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isdetectpotentiallydangerousappsrooted"
+      },
+      {
+        "name": "isTestKeysRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "istestkeysrooted"
+      },
+      {
+        "name": "isCheckForBusyBoxBinaryRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckforbusyboxbinaryrooted"
+      },
+      {
+        "name": "isCheckForSuBinaryRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckforsubinaryrooted"
+      },
+      {
+        "name": "isCheckSuExistsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischecksuexistsrooted"
+      },
+      {
+        "name": "isCheckForRWPathsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckforrwpathsrooted"
+      },
+      {
+        "name": "isCheckForDangerousPropsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckfordangerouspropsrooted"
+      },
+      {
+        "name": "isCheckForRootNativeRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckforrootnativerooted"
+      },
+      {
+        "name": "isDetectRootCloakingAppsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isdetectrootcloakingappsrooted"
+      },
+      {
+        "name": "isSelinuxFlagInEnabled",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isselinuxflaginenabled"
+      },
+      {
+        "name": "isExistBuildTagsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isexistbuildtagsrooted"
+      },
+      {
+        "name": "doesSuperuserApkExistRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "doessuperuserapkexistrooted"
+      },
+      {
+        "name": "isExistSUPathRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isexistsupathrooted"
+      },
+      {
+        "name": "isCheckDirPermissionsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckdirpermissionsrooted"
+      },
+      {
+        "name": "isCheckExecutingCommandsRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckexecutingcommandsrooted"
+      },
+      {
+        "name": "isCheckInstalledPackagesRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckinstalledpackagesrooted"
+      },
+      {
+        "name": "isCheckforOverTheAirCertificatesRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "ischeckforovertheaircertificatesrooted"
+      },
+      {
+        "name": "isRunningOnEmulatorRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isrunningonemulatorrooted"
+      },
+      {
+        "name": "isRunningOnEmulator",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "isrunningonemulator"
+      },
+      {
+        "name": "simpleCheckEmulatorRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "simplecheckemulatorrooted"
+      },
+      {
+        "name": "simpleCheckSDKBF86Rooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "simplechecksdkbf86rooted"
+      },
+      {
+        "name": "simpleCheckQRREFPHRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "simplecheckqrrefphrooted"
+      },
+      {
+        "name": "simpleCheckBuildRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "simplecheckbuildrooted"
+      },
+      {
+        "name": "checkGenymotionRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "checkgenymotionrooted"
+      },
+      {
+        "name": "checkGenericRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "checkgenericrooted"
+      },
+      {
+        "name": "checkGoogleSDKRooted",
+        "signature": "() => Promise<{ isRooted: boolean; }>",
+        "parameters": [],
+        "returns": "Promise<{ isRooted: boolean; }>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "checkgooglesdkrooted"
+      },
+      {
+        "name": "getDeviceInfo",
+        "signature": "() => Promise<DeviceInfo>",
+        "parameters": [],
+        "returns": "Promise<DeviceInfo>",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [
+          "DeviceInfo"
+        ],
+        "slug": "getdeviceinfo"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "DeviceInfo",
+      "slug": "deviceinfo",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "DEVICE",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "MODEL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "MANUFACTURER",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "BRAND",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "BOARD",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "HARDWARE",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "PRODUCT",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "FINGERPRINT",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "HOST",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "USER",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "OSNAME",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "OSVERSION",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "V_INCREMENTAL",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "V_RELEASE",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "V_SDK_INT",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
