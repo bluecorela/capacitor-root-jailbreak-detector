@@ -1,5 +1,8 @@
 export interface RootJailBreakDetectorPlugin {
   isRooted(): Promise<{ isRooted: boolean }>;
+  isJailbrokenOrRooted(): Promise <{
+    result: boolean
+  }>
   isRootedWithBusyBox(): Promise<{ isRooted: boolean }>;
   isRootedWithEmulator(): Promise<{ isRooted: boolean }>;
   isRootedWithBusyBoxWithEmulator(): Promise<{ isRooted: boolean }>;
