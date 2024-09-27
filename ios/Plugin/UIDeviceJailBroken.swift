@@ -17,15 +17,34 @@ extension UIDevice {
     var isJailBroken: Bool {
         get {
             if UIDevice.current.isSimulator { return false }
+
             if JailBrokenHelper.hasCydiaInstalled() { return true }
+            
+            // Verificar si hay aplicaciones sospechosas instaladas
             if JailBrokenHelper.isContainsSuspiciousApps() { return true }
+            
+            // Verificar si existen rutas sospechosas del sistema
             if JailBrokenHelper.isSuspiciousSystemPathsExists() { return true }
+            
+            // Comprobación adicional para rootless: ver si podemos acceder a comandos de sistema o rutas restringidas
+            if JailBrokenHelper.isRootlessDetected() { return true }
+
             return JailBrokenHelper.canEditSystemFiles()
         }
     }
 }
 
 private struct JailBrokenHelper {
+    static func isRootlessDetected() -> Bool {
+        // Verificar acceso a rutas específicas de rootless
+        let rootlessPaths = ["/var/jb", "/private/jb"]
+        for path in rootlessPaths {
+            if FileManager.default.fileExists(atPath: path) {
+                return true
+            }
+        }
+        return false
+    }
     static func hasCydiaInstalled() -> Bool {
         return UIApplication.shared.canOpenURL(URL(string: "cydia://")!)
     }
@@ -70,7 +89,10 @@ private struct JailBrokenHelper {
                 "/Applications/MxTube.app",
                 "/Applications/RockApp.app",
                 "/Applications/SBSettings.app",
-                "/Applications/WinterBoard.app"
+                "/Applications/WinterBoard.app",
+                "/Applications/palera1n.app",
+                "/Applications/Sileo.app",
+                "/Applications/Zebra.app"
         ]
     }
     
@@ -80,6 +102,7 @@ private struct JailBrokenHelper {
                 "/private/var/lib/apt",
                 "/private/var/lib/apt/",
                 "/private/var/lib/cydia",
+                "/private/var/lib/palera1n",
                 "/private/var/mobile/Library/SBSettings/Themes",
                 "/private/var/stash",
                 "/private/var/tmp/cydia.log",
